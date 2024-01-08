@@ -1,6 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from rclpy import qos
+from cv_bridge import CvBridge
 from cv2 import namedWindow, cvtColor, imshow, inRange
 
 from cv2 import destroyAllWindows, startWindowThread
@@ -8,7 +9,7 @@ from cv2 import COLOR_BGR2GRAY, waitKey
 from cv2 import blur, Canny, resize, INTER_CUBIC
 from numpy import mean
 from sensor_msgs.msg import Image
-from cv_bridge import CvBridge
+
 
 
 class ImageConverter(Node):

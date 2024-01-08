@@ -1,0 +1,147 @@
+[0.000000] (-) TimerEvent: {}
+[0.005593] (opencv_test) JobQueued: {'identifier': 'opencv_test', 'dependencies': OrderedDict()}
+[0.006303] (robot_controller_1) JobQueued: {'identifier': 'robot_controller_1', 'dependencies': OrderedDict()}
+[0.052808] (opencv_test) JobStarted: {'identifier': 'opencv_test'}
+[0.111042] (-) TimerEvent: {}
+[0.212130] (-) TimerEvent: {}
+[0.352451] (-) TimerEvent: {}
+[0.461342] (-) TimerEvent: {}
+[0.571268] (-) TimerEvent: {}
+[0.677255] (-) TimerEvent: {}
+[0.747146] (robot_controller_1) JobStarted: {'identifier': 'robot_controller_1'}
+[0.777409] (-) TimerEvent: {}
+[0.893334] (-) TimerEvent: {}
+[1.011445] (-) TimerEvent: {}
+[1.111968] (-) TimerEvent: {}
+[1.216646] (-) TimerEvent: {}
+[1.317714] (-) TimerEvent: {}
+[1.418343] (-) TimerEvent: {}
+[1.518889] (-) TimerEvent: {}
+[1.619707] (-) TimerEvent: {}
+[1.720459] (-) TimerEvent: {}
+[1.821182] (-) TimerEvent: {}
+[1.922524] (-) TimerEvent: {}
+[2.025930] (-) TimerEvent: {}
+[2.126875] (-) TimerEvent: {}
+[2.230122] (-) TimerEvent: {}
+[2.332440] (-) TimerEvent: {}
+[2.433019] (-) TimerEvent: {}
+[2.534207] (-) TimerEvent: {}
+[2.636031] (-) TimerEvent: {}
+[2.742106] (-) TimerEvent: {}
+[2.845724] (-) TimerEvent: {}
+[2.947375] (-) TimerEvent: {}
+[3.051247] (-) TimerEvent: {}
+[3.153794] (-) TimerEvent: {}
+[3.254772] (-) TimerEvent: {}
+[3.355440] (-) TimerEvent: {}
+[3.455996] (-) TimerEvent: {}
+[3.556791] (-) TimerEvent: {}
+[3.657505] (-) TimerEvent: {}
+[3.758406] (-) TimerEvent: {}
+[3.859219] (-) TimerEvent: {}
+[3.960218] (-) TimerEvent: {}
+[4.061396] (-) TimerEvent: {}
+[4.162200] (-) TimerEvent: {}
+[4.262856] (-) TimerEvent: {}
+[4.363250] (-) TimerEvent: {}
+[4.463756] (-) TimerEvent: {}
+[4.565224] (-) TimerEvent: {}
+[4.666033] (-) TimerEvent: {}
+[4.769353] (-) TimerEvent: {}
+[4.870035] (-) TimerEvent: {}
+[4.973175] (-) TimerEvent: {}
+[5.075102] (-) TimerEvent: {}
+[5.176773] (-) TimerEvent: {}
+[5.212283] (robot_controller_1) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'develop', '--editable', '--build-directory', '/home/kanixre/ros2_ws/build/robot_controller_1/build', '--no-deps', 'install_data'], 'cwd': '/home/kanixre/ros2_ws/build/robot_controller_1', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_GB:en', 'USER': 'kanixre', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/kanixre', 'CHROME_DESKTOP': 'code-url-handler.desktop', 'TERM_PROGRAM_VERSION': '1.84.2', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'SYSTEMD_EXEC_PID': '2085', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'humble', 'LOGNAME': 'kanixre', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'kanixre', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '1', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/kanixre-virtual-machine:@/tmp/.ICE-unix/1885,unix/kanixre-virtual-machine:/tmp/.ICE-unix/1885', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/0349321d_532a_40b7_b63b_0baf4baf5663', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.NM43G2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-28a83725e6.sock', 'GNOME_TERMINAL_SERVICE': ':1.104', 'TERM_PROGRAM': 'vscode', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '--ms-enable-electron-run-as-node', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/kanixre/ros2_ws/build/robot_controller_1', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/kanixre/ros2_ws/build/robot_controller_1/prefix_override:/home/kanixre/ros2_ws/install/robot_controller_1/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[5.276956] (-) TimerEvent: {}
+[5.380112] (-) TimerEvent: {}
+[5.482408] (-) TimerEvent: {}
+[5.583694] (-) TimerEvent: {}
+[5.684936] (-) TimerEvent: {}
+[5.788920] (-) TimerEvent: {}
+[5.809203] (opencv_test) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'develop', '--editable', '--build-directory', '/home/kanixre/ros2_ws/build/opencv_test/build', '--no-deps', 'install_data'], 'cwd': '/home/kanixre/ros2_ws/build/opencv_test', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_GB:en', 'USER': 'kanixre', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/kanixre', 'CHROME_DESKTOP': 'code-url-handler.desktop', 'TERM_PROGRAM_VERSION': '1.84.2', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'SYSTEMD_EXEC_PID': '2085', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'humble', 'LOGNAME': 'kanixre', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'kanixre', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '1', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/kanixre-virtual-machine:@/tmp/.ICE-unix/1885,unix/kanixre-virtual-machine:/tmp/.ICE-unix/1885', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/0349321d_532a_40b7_b63b_0baf4baf5663', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.NM43G2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-28a83725e6.sock', 'GNOME_TERMINAL_SERVICE': ':1.104', 'TERM_PROGRAM': 'vscode', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '--ms-enable-electron-run-as-node', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/kanixre/ros2_ws/build/opencv_test', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/kanixre/ros2_ws/build/opencv_test/prefix_override:/home/kanixre/ros2_ws/install/opencv_test/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[5.889034] (-) TimerEvent: {}
+[5.990712] (-) TimerEvent: {}
+[6.091180] (-) TimerEvent: {}
+[6.194453] (-) TimerEvent: {}
+[6.297442] (-) TimerEvent: {}
+[6.402395] (-) TimerEvent: {}
+[6.503892] (-) TimerEvent: {}
+[6.608017] (-) TimerEvent: {}
+[6.715136] (-) TimerEvent: {}
+[6.818591] (-) TimerEvent: {}
+[6.923275] (-) TimerEvent: {}
+[7.026587] (-) TimerEvent: {}
+[7.129452] (-) TimerEvent: {}
+[7.231677] (-) TimerEvent: {}
+[7.334566] (-) TimerEvent: {}
+[7.436139] (-) TimerEvent: {}
+[7.539770] (-) TimerEvent: {}
+[7.602314] (robot_controller_1) StdoutLine: {'line': b'running develop\n'}
+[7.640474] (-) TimerEvent: {}
+[7.742102] (-) TimerEvent: {}
+[7.844963] (-) TimerEvent: {}
+[7.945542] (-) TimerEvent: {}
+[8.046182] (-) TimerEvent: {}
+[8.147154] (-) TimerEvent: {}
+[8.248379] (-) TimerEvent: {}
+[8.348858] (-) TimerEvent: {}
+[8.449391] (-) TimerEvent: {}
+[8.550085] (-) TimerEvent: {}
+[8.650974] (-) TimerEvent: {}
+[8.751714] (-) TimerEvent: {}
+[8.852659] (-) TimerEvent: {}
+[8.954803] (-) TimerEvent: {}
+[8.958948] (opencv_test) StdoutLine: {'line': b'running develop\n'}
+[9.055137] (-) TimerEvent: {}
+[9.156506] (-) TimerEvent: {}
+[9.258079] (-) TimerEvent: {}
+[9.359892] (-) TimerEvent: {}
+[9.462205] (-) TimerEvent: {}
+[9.564318] (-) TimerEvent: {}
+[9.575497] (robot_controller_1) StdoutLine: {'line': b'running egg_info\n'}
+[9.582143] (robot_controller_1) StdoutLine: {'line': b'writing robot_controller_1.egg-info/PKG-INFO\n'}
+[9.588013] (robot_controller_1) StdoutLine: {'line': b'writing dependency_links to robot_controller_1.egg-info/dependency_links.txt\n'}
+[9.593120] (robot_controller_1) StdoutLine: {'line': b'writing entry points to robot_controller_1.egg-info/entry_points.txt\n'}
+[9.596515] (robot_controller_1) StdoutLine: {'line': b'writing requirements to robot_controller_1.egg-info/requires.txt\n'}
+[9.601661] (robot_controller_1) StdoutLine: {'line': b'writing top-level names to robot_controller_1.egg-info/top_level.txt\n'}
+[9.622955] (robot_controller_1) StdoutLine: {'line': b"reading manifest file 'robot_controller_1.egg-info/SOURCES.txt'\n"}
+[9.632478] (robot_controller_1) StdoutLine: {'line': b"writing manifest file 'robot_controller_1.egg-info/SOURCES.txt'\n"}
+[9.657563] (robot_controller_1) StdoutLine: {'line': b'running build_ext\n'}
+[9.663418] (robot_controller_1) StdoutLine: {'line': b'Creating /home/kanixre/ros2_ws/install/robot_controller_1/lib/python3.10/site-packages/robot-controller-1.egg-link (link to .)\n'}
+[9.664524] (-) TimerEvent: {}
+[9.673604] (robot_controller_1) StdoutLine: {'line': b'\n'}
+[9.673838] (robot_controller_1) StdoutLine: {'line': b'Installed /home/kanixre/ros2_ws/build/robot_controller_1\n'}
+[9.675077] (robot_controller_1) StdoutLine: {'line': b'running install_data\n'}
+[9.766896] (-) TimerEvent: {}
+[9.868144] (-) TimerEvent: {}
+[9.969428] (-) TimerEvent: {}
+[10.031320] (opencv_test) StdoutLine: {'line': b'running egg_info\n'}
+[10.039214] (opencv_test) StdoutLine: {'line': b'writing opencv_test.egg-info/PKG-INFO\n'}
+[10.044195] (opencv_test) StdoutLine: {'line': b'writing dependency_links to opencv_test.egg-info/dependency_links.txt\n'}
+[10.047090] (opencv_test) StdoutLine: {'line': b'writing entry points to opencv_test.egg-info/entry_points.txt\n'}
+[10.049050] (opencv_test) StdoutLine: {'line': b'writing requirements to opencv_test.egg-info/requires.txt\n'}
+[10.050689] (opencv_test) StdoutLine: {'line': b'writing top-level names to opencv_test.egg-info/top_level.txt\n'}
+[10.055446] (opencv_test) StdoutLine: {'line': b"reading manifest file 'opencv_test.egg-info/SOURCES.txt'\n"}
+[10.061694] (opencv_test) StdoutLine: {'line': b"writing manifest file 'opencv_test.egg-info/SOURCES.txt'\n"}
+[10.069799] (-) TimerEvent: {}
+[10.076719] (opencv_test) StdoutLine: {'line': b'running build_ext\n'}
+[10.078944] (opencv_test) StdoutLine: {'line': b'Creating /home/kanixre/ros2_ws/install/opencv_test/lib/python3.10/site-packages/opencv-test.egg-link (link to .)\n'}
+[10.122292] (opencv_test) StdoutLine: {'line': b'Installing opencv_test script to /home/kanixre/ros2_ws/install/opencv_test/lib/opencv_test\n'}
+[10.129388] (opencv_test) StdoutLine: {'line': b'\n'}
+[10.129662] (opencv_test) StdoutLine: {'line': b'Installed /home/kanixre/ros2_ws/build/opencv_test\n'}
+[10.135390] (opencv_test) StdoutLine: {'line': b'running install_data\n'}
+[10.161666] (robot_controller_1) CommandEnded: {'returncode': 0}
+[10.169960] (-) TimerEvent: {}
+[10.272286] (-) TimerEvent: {}
+[10.373000] (-) TimerEvent: {}
+[10.473474] (-) TimerEvent: {}
+[10.592903] (-) TimerEvent: {}
+[10.638901] (robot_controller_1) JobEnded: {'identifier': 'robot_controller_1', 'rc': 0}
+[10.654779] (opencv_test) CommandEnded: {'returncode': 0}
+[10.708443] (-) TimerEvent: {}
+[10.809043] (-) TimerEvent: {}
+[10.919522] (-) TimerEvent: {}
+[10.998855] (opencv_test) JobEnded: {'identifier': 'opencv_test', 'rc': 0}
+[11.006188] (-) EventReactorShutdown: {}

@@ -1,0 +1,27 @@
+[8.180s] Invoking command in '/home/kanixre/ros2_ws/build/robot_controller_1': PYTHONPATH=/home/kanixre/ros2_ws/build/robot_controller_1/prefix_override:/home/kanixre/ros2_ws/install/robot_controller_1/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/kanixre/ros2_ws/build/robot_controller_1/build --no-deps install_data
+[11.505s] running develop
+[11.507s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[11.507s]   warnings.warn(
+[11.517s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[11.518s]   warnings.warn(
+[13.588s] running egg_info
+[13.588s] creating robot_controller_1.egg-info
+[13.597s] writing robot_controller_1.egg-info/PKG-INFO
+[13.599s] writing dependency_links to robot_controller_1.egg-info/dependency_links.txt
+[13.600s] writing entry points to robot_controller_1.egg-info/entry_points.txt
+[13.605s] writing requirements to robot_controller_1.egg-info/requires.txt
+[13.610s] writing top-level names to robot_controller_1.egg-info/top_level.txt
+[13.610s] writing manifest file 'robot_controller_1.egg-info/SOURCES.txt'
+[13.642s] reading manifest file 'robot_controller_1.egg-info/SOURCES.txt'
+[13.643s] writing manifest file 'robot_controller_1.egg-info/SOURCES.txt'
+[13.693s] running build_ext
+[13.694s] Creating /home/kanixre/ros2_ws/install/robot_controller_1/lib/python3.10/site-packages/robot-controller-1.egg-link (link to .)
+[13.706s] 
+[13.706s] Installed /home/kanixre/ros2_ws/build/robot_controller_1
+[13.707s] running install_data
+[13.707s] creating /home/kanixre/ros2_ws/install/robot_controller_1/share/ament_index
+[13.707s] creating /home/kanixre/ros2_ws/install/robot_controller_1/share/ament_index/resource_index
+[13.707s] creating /home/kanixre/ros2_ws/install/robot_controller_1/share/ament_index/resource_index/packages
+[13.707s] copying resource/robot_controller_1 -> /home/kanixre/ros2_ws/install/robot_controller_1/share/ament_index/resource_index/packages
+[13.708s] copying package.xml -> /home/kanixre/ros2_ws/install/robot_controller_1/share/robot_controller_1
+[14.277s] Invoked command in '/home/kanixre/ros2_ws/build/robot_controller_1' returned '0': PYTHONPATH=/home/kanixre/ros2_ws/build/robot_controller_1/prefix_override:/home/kanixre/ros2_ws/install/robot_controller_1/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/kanixre/ros2_ws/build/robot_controller_1/build --no-deps install_data

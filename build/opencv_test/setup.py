@@ -1,1 +1,0 @@
-/home/kanixre/ros2_ws/src/opencv_test/setup.py

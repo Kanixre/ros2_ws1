@@ -1,0 +1,3 @@
+[console_scripts]
+object_detector = robot_controller_1.object_detector1:main
+
