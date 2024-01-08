@@ -1,0 +1,26 @@
+running develop
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running egg_info
+creating opencv_test.egg-info
+writing opencv_test.egg-info/PKG-INFO
+writing dependency_links to opencv_test.egg-info/dependency_links.txt
+writing entry points to opencv_test.egg-info/entry_points.txt
+writing requirements to opencv_test.egg-info/requires.txt
+writing top-level names to opencv_test.egg-info/top_level.txt
+writing manifest file 'opencv_test.egg-info/SOURCES.txt'
+reading manifest file 'opencv_test.egg-info/SOURCES.txt'
+writing manifest file 'opencv_test.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/kanixre/ros2_ws/install/opencv_test/lib/python3.10/site-packages/opencv-test.egg-link (link to .)
+Installing opencv_test script to /home/kanixre/ros2_ws/install/opencv_test/lib/opencv_test
+
+Installed /home/kanixre/ros2_ws/build/opencv_test
+running install_data
+creating /home/kanixre/ros2_ws/install/opencv_test/share/ament_index
+creating /home/kanixre/ros2_ws/install/opencv_test/share/ament_index/resource_index
+creating /home/kanixre/ros2_ws/install/opencv_test/share/ament_index/resource_index/packages
+copying resource/opencv_test -> /home/kanixre/ros2_ws/install/opencv_test/share/ament_index/resource_index/packages
+copying package.xml -> /home/kanixre/ros2_ws/install/opencv_test/share/opencv_test
