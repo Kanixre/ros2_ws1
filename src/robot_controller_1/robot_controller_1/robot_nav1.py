@@ -34,7 +34,7 @@ class Mover(Node):
         if min_dist < 0.4: #changed from 2m to maybe 1.75m?not sure of the conversion
             t.angular.z = -0.2 #turns right instead because my robot starts in a different position?
         else:
-            t.linear.x = 0.08 # speed is much slower now
+            t.linear.x = 0.3 # speed is much slower now
         self.publisher.publish(t)
 
 

@@ -9,7 +9,7 @@ import cv2
 
 # ROS libraries
 import image_geometry
-from tf2_ros import Buffer, TransformListener
+from tf2_ros import Buffer, TransformListener # unsure if its needed
 
 # ROS Messages
 from sensor_msgs.msg import Image, CameraInfo
@@ -37,9 +37,6 @@ class ObjectDetector(Node):
                                                 self.camera_info_callback, 
                                                 qos_profile=qos.qos_profile_sensor_data)
         
-        # Part of pothole counter
-        self.pothole_count_info_sub = self.create_subscription(Posestamped, '')
-        
         self.object_location_pub = self.create_publisher(PoseStamped, '/limo/object_location', 10)
 
         self.image_sub = self.create_subscription(Image, '/limo/depth_camera_link/image_raw', 
@@ -48,16 +45,18 @@ class ObjectDetector(Node):
         self.image_sub = self.create_subscription(Image, '/limo/depth_camera_link/depth/image_raw', 
                                                   self.image_depth_callback, qos_profile=qos.qos_profile_sensor_data)
         
-        self.tf_buffer = Buffer()
-        self.tf_listener = TransformListener(self.tf_buffer, self)
+        # Not needed here because its done in the other code. can only be done in oe place.
+        # self.tf_buffer = Buffer()
+        # self.tf_listener = TransformListener(self.tf_buffer, self)
 
-    def get_tf_transform(self, target_frame, source_frame):
-        try:
-            transform = self.tf_buffer.lookup_transform(target_frame, source_frame, rclpy.time.Time())
-            return transform
-        except Exception as e:
-            self.get_logger().warning(f"Failed to lookup transform: {str(e)}")
-            return None
+    # Exists in object_counter code
+    # def get_tf_transform(self, target_frame, source_frame):
+    #     try:
+    #         transform = self.tf_buffer.lookup_transform(target_frame, source_frame, rclpy.time.Time())
+    #         return transform
+    #     except Exception as e:
+    #         self.get_logger().warning(f"Failed to lookup transform: {str(e)}")
+    #         return None
 
     def camera_info_callback(self, data):
         if not self.camera_model:
@@ -96,6 +95,7 @@ class ObjectDetector(Node):
         image_mask = cv2.inRange(hsv, lower_pink, upper_pink)
         contours, _, = cv2.findContours(image_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
         for contour in contours:
+            contour_area = cv2.contourArea(contour)
             M = cv2.moments(contour)
             if M["m00"] == 0:
                 print('No object detected.')
@@ -114,6 +114,7 @@ class ObjectDetector(Node):
             print('image coords: ', image_coords)
             print('depth coords: ', depth_coords)
             print('depth value: ', depth_value)
+            print('contour area value', contour_area)
 
             # calculate object's 3d location in camera coords
             camera_coords = self.camera_model.projectPixelTo3dRay((image_coords[1], image_coords[0])) #project the image coords (x,y) into 3D ray in camera coords 
@@ -135,17 +136,10 @@ class ObjectDetector(Node):
 
             # print out the coordinates in the odom frame
             # transform = self.get_tf_transform('depth_link', 'odom') 
-            transform = self.get_tf_transform('odom', 'depth_link') 
-            p_camera = do_transform_pose(object_location.pose, transform)
+            # transform = self.get_tf_transform('odom', 'depth_link') 
+            # p_camera = do_transform_pose(object_location.pose, transform)
             
-            print('odom coords: ', p_camera.position)
-
-            # # Part of the pothole counter...
-            # pothole_relative_to_odom = PoseStamped()
-            # pothole_relative_to_odom.header.frame_id = 'odom' # frame position is odom, the world
-            # pothole_relative_to_odom.pose = p_camera
-            # self.object_location_pub.publish(pothole_relative_to_odom)
-
+            # print('odom coords: ', p_camera.position) # May still be useful for report section
 
         cv2.drawContours(image_color, contours,-1,(0,255,0),2)
 

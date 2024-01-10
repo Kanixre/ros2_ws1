@@ -2,13 +2,14 @@
 import rclpy
 from rclpy.node import Node
 from rclpy import qos
+import numpy as np
 
 # OpenCV
 import cv2
 
 # ROS libraries
 import image_geometry
-from tf2_ros import Buffer, TransformListener
+from tf2_ros import Buffer, TransformListener # unsure if its needed
 
 # ROS Messages
 from sensor_msgs.msg import Image, CameraInfo
@@ -29,6 +30,9 @@ class ObjectDetector(Node):
         super().__init__('image_projection_3')
         self.bridge = CvBridge()
 
+        # pothole counter -Counter variable for object detection
+        self.object_count = 0  
+
         self.camera_info_sub = self.create_subscription(CameraInfo, '/limo/depth_camera_link/camera_info',
                                                 self.camera_info_callback, 
                                                 qos_profile=qos.qos_profile_sensor_data)
@@ -41,16 +45,18 @@ class ObjectDetector(Node):
         self.image_sub = self.create_subscription(Image, '/limo/depth_camera_link/depth/image_raw', 
                                                   self.image_depth_callback, qos_profile=qos.qos_profile_sensor_data)
         
-        self.tf_buffer = Buffer()
-        self.tf_listener = TransformListener(self.tf_buffer, self)
+        # Not needed here because its done in the other code. can only be done in oe place.
+        # self.tf_buffer = Buffer()
+        # self.tf_listener = TransformListener(self.tf_buffer, self)
 
-    def get_tf_transform(self, target_frame, source_frame):
-        try:
-            transform = self.tf_buffer.lookup_transform(target_frame, source_frame, rclpy.time.Time())
-            return transform
-        except Exception as e:
-            self.get_logger().warning(f"Failed to lookup transform: {str(e)}")
-            return None
+    # Exists in object_counter code
+    # def get_tf_transform(self, target_frame, source_frame):
+    #     try:
+    #         transform = self.tf_buffer.lookup_transform(target_frame, source_frame, rclpy.time.Time())
+    #         return transform
+    #     except Exception as e:
+    #         self.get_logger().warning(f"Failed to lookup transform: {str(e)}")
+    #         return None
 
     def camera_info_callback(self, data):
         if not self.camera_model:
@@ -80,53 +86,68 @@ class ObjectDetector(Node):
         # provide the right values, or even better do it in HSV
         image_mask = cv2.inRange(image_color, (0, 0, 0), (255, 255, 255))
 
-        # calculate moments of the binary image
-        M = cv2.moments(image_mask)
+        # Testing - modify this with omar help and code
 
-        if M["m00"] == 0:
-            print('No object detected.')
-            return
+        # detect a color blob in the color image
+        hsv = cv2.cvtColor(image_color, cv2.COLOR_BGR2HSV)
+        lower_pink = np.array([140, 50, 150])
+        upper_pink = np.array([180, 255, 255])
+        image_mask = cv2.inRange(hsv, lower_pink, upper_pink)
+        contours, _, = cv2.findContours(image_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        for contour in contours:
+            contour_area = cv2.contourArea(contour)
+            M = cv2.moments(contour)
+            if M["m00"] == 0:
+                print('No object detected.')
+                return    
+            # calculate the y,x centroid
+            image_coords = (M["m01"] / M["m00"], M["m10"] / M["m00"])
+            
 
-        # calculate the y,x centroid
-        image_coords = (M["m01"] / M["m00"], M["m10"] / M["m00"])
-        # "map" from color to depth image
-        depth_coords = (image_depth.shape[0]/2 + (image_coords[0] - image_color.shape[0]/2)*self.color2depth_aspect, 
-            image_depth.shape[1]/2 + (image_coords[1] - image_color.shape[1]/2)*self.color2depth_aspect)
-        # get the depth reading at the centroid location
-        depth_value = image_depth[int(depth_coords[0]), int(depth_coords[1])] # you might need to do some boundary checking first!
+        # put everything in a for loop temporarily fixes the issue
+            # "map" from color to depth image
+            depth_coords = (image_depth.shape[0]/2 + (image_coords[0] - image_color.shape[0]/2)*self.color2depth_aspect, 
+                image_depth.shape[1]/2 + (image_coords[1] - image_color.shape[1]/2)*self.color2depth_aspect)
+            # get the depth reading at the centroid location
+            depth_value = image_depth[int(depth_coords[0]), int(depth_coords[1])] # you might need to do some boundary checking first!
 
-        print('image coords: ', image_coords)
-        print('depth coords: ', depth_coords)
-        print('depth value: ', depth_value)
+            print('image coords: ', image_coords)
+            print('depth coords: ', depth_coords)
+            print('depth value: ', depth_value)
+            print('contour area value', contour_area)
 
-        # calculate object's 3d location in camera coords
-        camera_coords = self.camera_model.projectPixelTo3dRay((image_coords[1], image_coords[0])) #project the image coords (x,y) into 3D ray in camera coords 
-        camera_coords = [x/camera_coords[2] for x in camera_coords] # adjust the resulting vector so that z = 1
-        camera_coords = [x*depth_value for x in camera_coords] # multiply the vector by depth
+            # calculate object's 3d location in camera coords
+            camera_coords = self.camera_model.projectPixelTo3dRay((image_coords[1], image_coords[0])) #project the image coords (x,y) into 3D ray in camera coords 
+            camera_coords = [x/camera_coords[2] for x in camera_coords] # adjust the resulting vector so that z = 1
+            camera_coords = [x*depth_value for x in camera_coords] # multiply the vector by depth
 
-        print('camera coords: ', camera_coords)
+            print('camera coords: ', camera_coords)
 
-        #define a point in camera coordinates
-        object_location = PoseStamped()
-        object_location.header.frame_id = "depth_link"
-        object_location.pose.orientation.w = 1.0
-        object_location.pose.position.x = camera_coords[0]
-        object_location.pose.position.y = camera_coords[1]
-        object_location.pose.position.z = camera_coords[2]
+            #define a point in camera coordinates
+            object_location = PoseStamped()
+            object_location.header.frame_id = "depth_link"
+            object_location.pose.orientation.w = 1.0
+            object_location.pose.position.x = camera_coords[0]
+            object_location.pose.position.y = camera_coords[1]
+            object_location.pose.position.z = camera_coords[2]
 
-        # publish so we can see that in rviz
-        self.object_location_pub.publish(object_location)        
+            # publish so we can see that in rviz
+            self.object_location_pub.publish(object_location)        
 
-        # print out the coordinates in the odom frame
-        transform = self.get_tf_transform('depth_link', 'odom')
-        p_camera = do_transform_pose(object_location.pose, transform)
+            # print out the coordinates in the odom frame
+            # transform = self.get_tf_transform('depth_link', 'odom') 
+            # transform = self.get_tf_transform('odom', 'depth_link') 
+            # p_camera = do_transform_pose(object_location.pose, transform)
+            
+            # print('odom coords: ', p_camera.position) # May still be useful for report section
 
-        print('odom coords: ', p_camera.position)
+        cv2.drawContours(image_color, contours,-1,(0,255,0),2)
 
+        # draws blue dot - unneeded
         if self.visualisation:
             # draw circles
-            cv2.circle(image_color, (int(image_coords[1]), int(image_coords[0])), 10, 255, -1)
-            cv2.circle(image_depth, (int(depth_coords[1]), int(depth_coords[0])), 5, 255, -1)
+            # cv2.circle(image_color, (int(image_coords[1]), int(image_coords[0])), 10, 255, -1)
+            # cv2.circle(image_depth, (int(depth_coords[1]), int(depth_coords[0])), 5, 255, -1)
 
             #resize and adjust for visualisation
             image_color = cv2.resize(image_color, (0,0), fx=0.5, fy=0.5)

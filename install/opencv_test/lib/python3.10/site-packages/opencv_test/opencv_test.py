@@ -1,6 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from rclpy import qos
+from cv_bridge import CvBridge
 from cv2 import namedWindow, cvtColor, imshow, inRange
 
 from cv2 import destroyAllWindows, startWindowThread
@@ -8,7 +9,7 @@ from cv2 import COLOR_BGR2GRAY, waitKey
 from cv2 import blur, Canny, resize, INTER_CUBIC
 from numpy import mean
 from sensor_msgs.msg import Image
-from cv_bridge import CvBridge
+
 
 
 class ImageConverter(Node):
@@ -24,7 +25,7 @@ class ImageConverter(Node):
     def image_callback(self, data):
         namedWindow("Image window")
         namedWindow("masked")
-        namedWindow("canny")
+        namedWindow("canny") # what is canny?
         cv_image = self.bridge.imgmsg_to_cv2(data, "bgr8")
         cv_image = resize(cv_image, None, fx=0.2, fy=0.2, interpolation = INTER_CUBIC)
 

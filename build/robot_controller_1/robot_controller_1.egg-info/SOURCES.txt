@@ -10,6 +10,7 @@ setup.py
 ../../build/robot_controller_1/robot_controller_1.egg-info/zip-safe
 resource/robot_controller_1
 robot_controller_1/__init__.py
+robot_controller_1/object_counter1.py
 robot_controller_1/object_detector1.py
 robot_controller_1/robot_nav1.py
 test/test_copyright.py
