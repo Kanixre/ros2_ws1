@@ -7,7 +7,7 @@ import numpy as np
 
 class PoseSubscriber(Node):
     def __init__(self):
-        super().__init__('pose_subscriber')
+        super().__init__('object_counter')
         self.subscription = self.create_subscription(
             PoseStamped, '/limo/object_location',
             self.posestamped_callback, 10
@@ -38,8 +38,8 @@ class PoseSubscriber(Node):
         if self.threshold_check(new_x, new_y):
             return
         self.coordinates.append((new_x, new_y))
-        print("Count : ", len(self.coordinates)) # Number of potholes as length of the array
-        self.get_logger(self.coordinates) # Prints the Pothole count value to the log screen
+        # print("Count : ", len(self.coordinates)) # prints number of potholes as length of the array For testing
+        self.get_logger().info (f"Pothole Count : , {len(self.coordinates)}") # Prints the Pothole count value to the log screen
 
     # change variable names and learn em
     def threshold_check(self, new_x, new_y):

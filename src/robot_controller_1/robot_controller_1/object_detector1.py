@@ -27,7 +27,7 @@ class ObjectDetector(Node):
     color2depth_aspect = 1.0 # for a simulated camera
 
     def __init__(self):    
-        super().__init__('image_projection_3')
+        super().__init__('object_detector')
         self.bridge = CvBridge()
 
         # pothole counter -Counter variable for object detection
@@ -45,7 +45,7 @@ class ObjectDetector(Node):
         self.image_sub = self.create_subscription(Image, '/limo/depth_camera_link/depth/image_raw', 
                                                   self.image_depth_callback, qos_profile=qos.qos_profile_sensor_data)
         
-        # Not needed here because its done in the other code. can only be done in oe place.
+        # Exists in object_counter code. can only be done in oe place.
         # self.tf_buffer = Buffer()
         # self.tf_listener = TransformListener(self.tf_buffer, self)
 
@@ -134,6 +134,7 @@ class ObjectDetector(Node):
             # publish so we can see that in rviz
             self.object_location_pub.publish(object_location)        
 
+            # Exists in object_counter
             # print out the coordinates in the odom frame
             # transform = self.get_tf_transform('depth_link', 'odom') 
             # transform = self.get_tf_transform('odom', 'depth_link') 

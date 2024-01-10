@@ -13,10 +13,11 @@ class Mover(Node):
     def __init__(self):
         """
         On construction of the object, create a Subscriber
-        to listen to lasr scans and a Publisher to control
+        to listen to laser scans and a Publisher to control
         the robot
         """
-        super().__init__('tf_listener')
+        # super().__init__('tf_listener')
+        super().__init__('robot_nav')
         self.publisher = self.create_publisher(Twist, "/cmd_vel", 10)
         self.subscriber = self.create_subscription(LaserScan, "/scan", self.laserscan_callback, 10)
     

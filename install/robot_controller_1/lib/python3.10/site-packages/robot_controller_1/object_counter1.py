@@ -38,7 +38,8 @@ class PoseSubscriber(Node):
         if self.threshold_check(new_x, new_y):
             return
         self.coordinates.append((new_x, new_y))
-        print("Count : ", len(self.coordinates)) # Number of potholes as length of the array
+        # print("Count : ", len(self.coordinates)) # prints number of potholes as length of the array For testing
+        self.get_logger().info (f"Pothole Count : , {len(self.coordinates)}") # Prints the Pothole count value to the log screen
 
     # change variable names and learn em
     def threshold_check(self, new_x, new_y):
