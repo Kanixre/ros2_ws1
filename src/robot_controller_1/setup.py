@@ -21,6 +21,9 @@ setup(
     entry_points={
         'console_scripts': [
             "object_detector = robot_controller_1.object_detector1:main"
+            "robot_nav = robot_controller_1.robot_nav1:main"
+            "object_counter = robot_controller_1.object_counter1:main"
+            
         ],
     },
 )

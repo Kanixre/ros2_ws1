@@ -1,3 +1,3 @@
 import sys
 sys.real_prefix = sys.prefix
-sys.prefix = sys.exec_prefix = '/home/kanixre/ros2_ws/install/opencv_test'
+sys.prefix = sys.exec_prefix = '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test'

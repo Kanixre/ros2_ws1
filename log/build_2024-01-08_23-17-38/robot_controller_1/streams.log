@@ -1,0 +1,26 @@
+[0.711s] Invoking command in '/home/kanixre/ros_ws1_wsl/ros2_ws1/src/robot_controller_1': PYTHONPATH=/home/kanixre/ros_ws1_wsl/ros2_ws1/build/robot_controller_1/prefix_override:/home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/lib/python3.10/site-packages:${PYTHONPATH} WSLENV=ELECTRON_RUN_AS_NODE/w:WT_SESSION:WT_PROFILE_ID: /usr/bin/python3 setup.py egg_info --egg-base ../../build/robot_controller_1 build --build-base /home/kanixre/ros_ws1_wsl/ros2_ws1/build/robot_controller_1/build install --record /home/kanixre/ros_ws1_wsl/ros2_ws1/build/robot_controller_1/install.log --single-version-externally-managed
+[0.859s] running egg_info
+[0.859s] writing ../../build/robot_controller_1/robot_controller_1.egg-info/PKG-INFO
+[0.859s] writing dependency_links to ../../build/robot_controller_1/robot_controller_1.egg-info/dependency_links.txt
+[0.860s] writing entry points to ../../build/robot_controller_1/robot_controller_1.egg-info/entry_points.txt
+[0.860s] writing requirements to ../../build/robot_controller_1/robot_controller_1.egg-info/requires.txt
+[0.860s] writing top-level names to ../../build/robot_controller_1/robot_controller_1.egg-info/top_level.txt
+[0.862s] reading manifest file '../../build/robot_controller_1/robot_controller_1.egg-info/SOURCES.txt'
+[0.863s] writing manifest file '../../build/robot_controller_1/robot_controller_1.egg-info/SOURCES.txt'
+[0.863s] running build
+[0.863s] running build_py
+[0.864s] copying robot_controller_1/robot_nav1.py -> /home/kanixre/ros_ws1_wsl/ros2_ws1/build/robot_controller_1/build/lib/robot_controller_1
+[0.864s] running install
+[0.864s] running install_lib
+[0.864s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[0.864s]   warnings.warn(
+[0.864s] copying /home/kanixre/ros_ws1_wsl/ros2_ws1/build/robot_controller_1/build/lib/robot_controller_1/robot_nav1.py -> /home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/lib/python3.10/site-packages/robot_controller_1
+[0.864s] byte-compiling /home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/lib/python3.10/site-packages/robot_controller_1/robot_nav1.py to robot_nav1.cpython-310.pyc
+[0.865s] running install_data
+[0.865s] running install_egg_info
+[0.867s] removing '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/lib/python3.10/site-packages/robot_controller_1-0.0.0-py3.10.egg-info' (and everything under it)
+[0.867s] Copying ../../build/robot_controller_1/robot_controller_1.egg-info to /home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/lib/python3.10/site-packages/robot_controller_1-0.0.0-py3.10.egg-info
+[0.868s] running install_scripts
+[0.885s] Installing object_detector = robot_controller_1.object_detector1:mainrobot_nav script to /home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/lib/robot_controller_1
+[0.886s] writing list of installed files to '/home/kanixre/ros_ws1_wsl/ros2_ws1/build/robot_controller_1/install.log'
+[0.948s] Invoked command in '/home/kanixre/ros_ws1_wsl/ros2_ws1/src/robot_controller_1' returned '0': PYTHONPATH=/home/kanixre/ros_ws1_wsl/ros2_ws1/build/robot_controller_1/prefix_override:/home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/lib/python3.10/site-packages:${PYTHONPATH} WSLENV=ELECTRON_RUN_AS_NODE/w:WT_SESSION:WT_PROFILE_ID: /usr/bin/python3 setup.py egg_info --egg-base ../../build/robot_controller_1 build --build-base /home/kanixre/ros_ws1_wsl/ros2_ws1/build/robot_controller_1/build install --record /home/kanixre/ros_ws1_wsl/ros2_ws1/build/robot_controller_1/install.log --single-version-externally-managed

@@ -1,3 +1,3 @@
 [console_scripts]
-object_detector = robot_controller_1.object_detector1:main
+object_detector = robot_controller_1.object_detector1:mainrobot_nav = robot_controller_1.robot_nav1:main
 

@@ -25,7 +25,7 @@ class ImageConverter(Node):
     def image_callback(self, data):
         namedWindow("Image window")
         namedWindow("masked")
-        namedWindow("canny")
+        namedWindow("canny") # what is canny?
         cv_image = self.bridge.imgmsg_to_cv2(data, "bgr8")
         cv_image = resize(cv_image, None, fx=0.2, fy=0.2, interpolation = INTER_CUBIC)
 
