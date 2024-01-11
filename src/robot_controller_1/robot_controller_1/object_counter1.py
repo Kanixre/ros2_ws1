@@ -29,7 +29,8 @@ class PotholeCounter(Node):
         self.coordinates.append((new_x, new_y))
         # Prints the Pothole count value to the log screen
         self.get_logger().info (f"Pothole Count : {len(self.coordinates)}")
-        
+        # Prints the Pothole count value to the log screen
+        self.get_logger().info (f"Pothole Location : {self.coordinates}")
 
     def threshold_check(self, new_x, new_y):
         threshold = 0.095 # min distance between 2 pothole coordinates
@@ -45,12 +46,8 @@ class PotholeCounter(Node):
 def main(args=None):
     rclpy.init(args=args)
     pothole_counter = PotholeCounter()
-    try:
-        rclpy.spin(pothole_counter)
-    except KeyboardInterrupt:
-        # Prints the Pothole counts final value to the log screen
-        print("Final Pothole Count : ", len(pothole_counter.coordinates))
-
+    rclpy.spin(pothole_counter)
+    
     # Save the report to a text file
     filename = 'report.txt'
     with open(filename, 'w') as file:

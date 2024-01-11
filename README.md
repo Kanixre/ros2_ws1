@@ -1,5 +1,5 @@
 # RobotProgWork1
-My first ROS-related project with Python. Uses a LIMO Robot to navigate a simple envinronment and detect potholes.
+My first ROS-related project with Python. Uses a LIMO Robot to navigate a simple world and detect potholes.
 
 Installing ROS2 Humble desktop
     https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html
@@ -44,5 +44,5 @@ Or to Run the nodes one by one,
 Summary
     1. The robot_nav.py simply moves the robot around the simulated area using a twist command.
     2. The object_detector.py detects potholes in the environment using opencv. It displays a window (either seperate or in rviz - the change cane be made in the code) which shows the potholes and its estimated size from a distance between 0.3 and 0.5 metres.
-    3. The object_counter.py reports the number of potholes detected and their locations relative the odom(world). The detector node deeds to be running as the counter depends on the marker info being published from it. It also prints the this information to a text file. The name can be changed to object_reporter too ;)
+    3. The object_counter.py reports the number of potholes detected and their locations relative the odom(world). The detector node deeds to be running as the counter depends on the marker info being published from it. It also prints the this information to a text file and saves it to the launch folder. The name can be changed to object_reporter too ;)
     
