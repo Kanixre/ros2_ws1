@@ -28,7 +28,7 @@ class Mover(Node):
         """
         Callback called any time a new laser scan become available
         """
-        min_dist = min(data.ranges[int(len(data.ranges)/2) -40 : int(len(data.ranges)/2) +40])
+        min_dist = min(data.ranges[int(len(data.ranges)/2) -30 : int(len(data.ranges)/2) +30])
         left = data.ranges[int(len(data.ranges)/2) -30]
         right = data.ranges[int(len(data.ranges)/2) +30]
 
@@ -37,7 +37,7 @@ class Mover(Node):
         if min_dist < 0.4: #changed from 2m to maybe 1.75m?not sure of the conversion
             t.angular.z = -0.2 #turns right instead because my robot starts in a different position?
         else:
-            t.linear.x = 0.2 # speed is much slower now
+            t.linear.x = 0.3 # speed is much slower now
         self.publisher.publish(t)
 
 

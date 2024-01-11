@@ -21,8 +21,8 @@ from tf2_geometry_msgs import do_transform_pose
 class ObjectDetector(Node):
     camera_model = None
     image_depth_ros = None
-
     visualisation = True
+
     # aspect ration between color and depth cameras
     # calculated as (color_horizontal_FOV/color_width) / (depth_horizontal_FOV/depth_width) from the dabai camera parameters
     color2depth_aspect = 1.0 # for a simulated camera
@@ -38,6 +38,9 @@ class ObjectDetector(Node):
         self.object_location_pub = self.create_publisher(PoseStamped, '/limo/object_location', 10)
 
         self.marker_pub = self.create_publisher(Marker, '/marker', 1)
+
+        # Publish the pothole image window to rviz
+        self.image_pub = self.create_publisher(Image, '/limo/depth_camera_link/image_pothole', 10)
 
         self.image_sub = self.create_subscription(Image, '/limo/depth_camera_link/image_raw', 
                                                   self.image_color_callback, qos_profile=qos.qos_profile_sensor_data)
@@ -161,12 +164,14 @@ class ObjectDetector(Node):
             self.marker_pub.publish(marker)
             self.point_id += 1
 
-        # image_pothole = self.bridge.cv2_to_imgmsg(image_color, "bgr8")
-        # self.image_pub.publish(image_pothole)
-        # cv2.waitKey(1)
-
-        cv2.imshow("image color", image_color) 
+        # to show image window in rviz
+        image_pothole = self.bridge.cv2_to_imgmsg(image_color, "bgr8")
+        self.image_pub.publish(image_pothole)
         cv2.waitKey(1)
+
+        # To publish a new window
+        # cv2.imshow("image color", image_color) 
+        # cv2.waitKey(1)
 
 def main(args=None):
     rclpy.init(args=args)
