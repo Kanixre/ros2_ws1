@@ -1,0 +1,315 @@
+[0.000000] (-) TimerEvent: {}
+[0.000896] (opencv_test) JobQueued: {'identifier': 'opencv_test', 'dependencies': OrderedDict()}
+[0.001162] (robot_controller_1) JobQueued: {'identifier': 'robot_controller_1', 'dependencies': OrderedDict()}
+[0.001347] (opencv_test) JobStarted: {'identifier': 'opencv_test'}
+[0.099731] (-) TimerEvent: {}
+[0.200553] (-) TimerEvent: {}
+[0.301165] (-) TimerEvent: {}
+[0.401868] (-) TimerEvent: {}
+[0.502709] (-) TimerEvent: {}
+[0.603302] (-) TimerEvent: {}
+[0.703991] (-) TimerEvent: {}
+[0.804408] (-) TimerEvent: {}
+[0.905053] (-) TimerEvent: {}
+[1.005618] (-) TimerEvent: {}
+[1.106294] (-) TimerEvent: {}
+[1.206853] (-) TimerEvent: {}
+[1.220888] (robot_controller_1) JobStarted: {'identifier': 'robot_controller_1'}
+[1.307100] (-) TimerEvent: {}
+[1.407786] (-) TimerEvent: {}
+[1.508612] (-) TimerEvent: {}
+[1.609457] (-) TimerEvent: {}
+[1.710172] (-) TimerEvent: {}
+[1.810777] (-) TimerEvent: {}
+[1.911632] (-) TimerEvent: {}
+[2.012420] (-) TimerEvent: {}
+[2.112977] (-) TimerEvent: {}
+[2.213431] (-) TimerEvent: {}
+[2.314251] (-) TimerEvent: {}
+[2.415260] (-) TimerEvent: {}
+[2.516172] (-) TimerEvent: {}
+[2.617054] (-) TimerEvent: {}
+[2.717562] (-) TimerEvent: {}
+[2.818160] (-) TimerEvent: {}
+[2.918850] (-) TimerEvent: {}
+[3.019468] (-) TimerEvent: {}
+[3.120050] (-) TimerEvent: {}
+[3.220615] (-) TimerEvent: {}
+[3.321574] (-) TimerEvent: {}
+[3.422240] (-) TimerEvent: {}
+[3.522935] (-) TimerEvent: {}
+[3.623937] (-) TimerEvent: {}
+[3.724864] (-) TimerEvent: {}
+[3.825594] (-) TimerEvent: {}
+[3.926131] (-) TimerEvent: {}
+[4.026894] (-) TimerEvent: {}
+[4.127636] (-) TimerEvent: {}
+[4.228085] (-) TimerEvent: {}
+[4.328852] (-) TimerEvent: {}
+[4.429738] (-) TimerEvent: {}
+[4.530551] (-) TimerEvent: {}
+[4.631067] (-) TimerEvent: {}
+[4.731596] (-) TimerEvent: {}
+[4.832125] (-) TimerEvent: {}
+[4.932737] (-) TimerEvent: {}
+[5.033484] (-) TimerEvent: {}
+[5.134070] (-) TimerEvent: {}
+[5.234858] (-) TimerEvent: {}
+[5.335757] (-) TimerEvent: {}
+[5.436198] (-) TimerEvent: {}
+[5.536891] (-) TimerEvent: {}
+[5.637768] (-) TimerEvent: {}
+[5.738451] (-) TimerEvent: {}
+[5.838999] (-) TimerEvent: {}
+[5.939505] (-) TimerEvent: {}
+[6.040212] (-) TimerEvent: {}
+[6.140846] (-) TimerEvent: {}
+[6.241838] (-) TimerEvent: {}
+[6.342799] (-) TimerEvent: {}
+[6.443608] (-) TimerEvent: {}
+[6.544355] (-) TimerEvent: {}
+[6.644922] (-) TimerEvent: {}
+[6.745487] (-) TimerEvent: {}
+[6.846263] (-) TimerEvent: {}
+[6.947229] (-) TimerEvent: {}
+[7.048048] (-) TimerEvent: {}
+[7.148989] (-) TimerEvent: {}
+[7.249664] (-) TimerEvent: {}
+[7.350146] (-) TimerEvent: {}
+[7.450615] (-) TimerEvent: {}
+[7.551208] (-) TimerEvent: {}
+[7.651914] (-) TimerEvent: {}
+[7.752593] (-) TimerEvent: {}
+[7.853213] (-) TimerEvent: {}
+[7.953949] (-) TimerEvent: {}
+[8.054386] (-) TimerEvent: {}
+[8.154842] (-) TimerEvent: {}
+[8.255406] (-) TimerEvent: {}
+[8.356250] (-) TimerEvent: {}
+[8.457303] (-) TimerEvent: {}
+[8.558188] (-) TimerEvent: {}
+[8.658639] (-) TimerEvent: {}
+[8.759335] (-) TimerEvent: {}
+[8.859850] (-) TimerEvent: {}
+[8.960409] (-) TimerEvent: {}
+[9.060920] (-) TimerEvent: {}
+[9.161702] (-) TimerEvent: {}
+[9.262488] (-) TimerEvent: {}
+[9.363025] (-) TimerEvent: {}
+[9.463619] (-) TimerEvent: {}
+[9.564103] (-) TimerEvent: {}
+[9.664606] (-) TimerEvent: {}
+[9.765577] (-) TimerEvent: {}
+[9.866305] (-) TimerEvent: {}
+[9.966839] (-) TimerEvent: {}
+[10.067346] (-) TimerEvent: {}
+[10.167941] (-) TimerEvent: {}
+[10.268528] (-) TimerEvent: {}
+[10.369064] (-) TimerEvent: {}
+[10.469718] (-) TimerEvent: {}
+[10.570320] (-) TimerEvent: {}
+[10.671383] (-) TimerEvent: {}
+[10.772256] (-) TimerEvent: {}
+[10.873052] (-) TimerEvent: {}
+[10.973722] (-) TimerEvent: {}
+[11.074551] (-) TimerEvent: {}
+[11.175773] (-) TimerEvent: {}
+[11.276556] (-) TimerEvent: {}
+[11.377150] (-) TimerEvent: {}
+[11.477650] (-) TimerEvent: {}
+[11.578591] (-) TimerEvent: {}
+[11.679239] (-) TimerEvent: {}
+[11.779834] (-) TimerEvent: {}
+[11.880347] (-) TimerEvent: {}
+[11.981016] (-) TimerEvent: {}
+[12.081688] (-) TimerEvent: {}
+[12.182284] (-) TimerEvent: {}
+[12.282815] (-) TimerEvent: {}
+[12.383344] (-) TimerEvent: {}
+[12.483804] (-) TimerEvent: {}
+[12.584475] (-) TimerEvent: {}
+[12.685433] (-) TimerEvent: {}
+[12.785962] (-) TimerEvent: {}
+[12.886470] (-) TimerEvent: {}
+[12.987011] (-) TimerEvent: {}
+[13.087651] (-) TimerEvent: {}
+[13.188312] (-) TimerEvent: {}
+[13.288911] (-) TimerEvent: {}
+[13.389366] (-) TimerEvent: {}
+[13.489892] (-) TimerEvent: {}
+[13.590502] (-) TimerEvent: {}
+[13.691339] (-) TimerEvent: {}
+[13.792005] (-) TimerEvent: {}
+[13.892608] (-) TimerEvent: {}
+[13.993490] (-) TimerEvent: {}
+[14.094527] (-) TimerEvent: {}
+[14.195515] (-) TimerEvent: {}
+[14.296177] (-) TimerEvent: {}
+[14.396923] (-) TimerEvent: {}
+[14.497887] (-) TimerEvent: {}
+[14.598456] (-) TimerEvent: {}
+[14.699047] (-) TimerEvent: {}
+[14.800187] (-) TimerEvent: {}
+[14.900636] (-) TimerEvent: {}
+[15.001091] (-) TimerEvent: {}
+[15.102390] (-) TimerEvent: {}
+[15.203582] (-) TimerEvent: {}
+[15.304305] (-) TimerEvent: {}
+[15.405285] (-) TimerEvent: {}
+[15.506246] (-) TimerEvent: {}
+[15.607342] (-) TimerEvent: {}
+[15.707957] (-) TimerEvent: {}
+[15.808596] (-) TimerEvent: {}
+[15.909123] (-) TimerEvent: {}
+[16.009986] (-) TimerEvent: {}
+[16.110636] (-) TimerEvent: {}
+[16.211271] (-) TimerEvent: {}
+[16.312155] (-) TimerEvent: {}
+[16.413083] (-) TimerEvent: {}
+[16.514188] (-) TimerEvent: {}
+[16.615110] (-) TimerEvent: {}
+[16.715867] (-) TimerEvent: {}
+[16.816493] (-) TimerEvent: {}
+[16.917007] (-) TimerEvent: {}
+[17.017796] (-) TimerEvent: {}
+[17.118541] (-) TimerEvent: {}
+[17.219106] (-) TimerEvent: {}
+[17.319703] (-) TimerEvent: {}
+[17.420459] (-) TimerEvent: {}
+[17.521340] (-) TimerEvent: {}
+[17.622390] (-) TimerEvent: {}
+[17.723246] (-) TimerEvent: {}
+[17.823873] (-) TimerEvent: {}
+[17.924486] (-) TimerEvent: {}
+[18.025283] (-) TimerEvent: {}
+[18.125792] (-) TimerEvent: {}
+[18.226442] (-) TimerEvent: {}
+[18.327354] (-) TimerEvent: {}
+[18.428323] (-) TimerEvent: {}
+[18.529099] (-) TimerEvent: {}
+[18.630184] (-) TimerEvent: {}
+[18.730900] (-) TimerEvent: {}
+[18.831899] (-) TimerEvent: {}
+[18.933121] (-) TimerEvent: {}
+[19.033965] (-) TimerEvent: {}
+[19.134808] (-) TimerEvent: {}
+[19.236435] (-) TimerEvent: {}
+[19.337053] (-) TimerEvent: {}
+[19.437720] (-) TimerEvent: {}
+[19.538312] (-) TimerEvent: {}
+[19.638990] (-) TimerEvent: {}
+[19.739744] (-) TimerEvent: {}
+[19.840553] (-) TimerEvent: {}
+[19.941232] (-) TimerEvent: {}
+[20.042043] (-) TimerEvent: {}
+[20.143427] (-) TimerEvent: {}
+[20.245017] (-) TimerEvent: {}
+[20.346160] (-) TimerEvent: {}
+[20.447062] (-) TimerEvent: {}
+[20.547704] (-) TimerEvent: {}
+[20.643930] (opencv_test) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/opencv_test', 'build', '--build-base', '/home/kanixre/ros_ws1_wsl/ros2_ws1/build/opencv_test/build', 'install', '--record', '/home/kanixre/ros_ws1_wsl/ros2_ws1/build/opencv_test/install.log', '--single-version-externally-managed'], 'cwd': '/home/kanixre/ros_ws1_wsl/ros2_ws1/src/opencv_test', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'kanixre', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/mnt/c/Users/Owner/Documents/robot-prog/limo_ros2/install/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'WT_PROFILE_ID': '{61c54bbd-c2c6-5271-96e7-009a87ff44bf}', 'HOME': '/home/kanixre', 'OLDPWD': '/home/kanixre/ros_ws1_wsl', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/mnt/c/Users/Owner/Documents/robot-prog/ros_ws1/ros2_ws1/install:/mnt/c/Users/Owner/Documents/robot-prog/limo_ros2/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'kanixre', 'NAME': 'MSI', 'WSL_INTEROP': '/run/WSL/62514_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '1', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Player/bin/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/Owner/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Owner/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin', 'WT_SESSION': '771b02e3-16fb-4b9b-b63f-c265f4aa1bab', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/mnt/c/Users/Owner/Documents/robot-prog/ros_ws1/ros2_ws1/install/robot_controller_1:/mnt/c/Users/Owner/Documents/robot-prog/ros_ws1/ros2_ws1/install/opencv_test:/mnt/c/Users/Owner/Documents/robot-prog/limo_ros2/install:/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/kanixre/ros_ws1_wsl/ros2_ws1/build/opencv_test', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/kanixre/ros_ws1_wsl/ros2_ws1/build/opencv_test/prefix_override:/home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test/lib/python3.10/site-packages:/mnt/c/Users/Owner/Documents/robot-prog/ros_ws1/ros2_ws1/install/robot_controller_1/lib/python3.10/site-packages:/mnt/c/Users/Owner/Documents/robot-prog/ros_ws1/ros2_ws1/install/opencv_test/lib/python3.10/site-packages:/mnt/c/Users/Owner/Documents/robot-prog/limo_ros2/build/voice_control:/mnt/c/Users/Owner/Documents/robot-prog/limo_ros2/install/local/lib/python3.10/dist-packages:/mnt/c/Users/Owner/Documents/robot-prog/limo_ros2/install/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/mnt/c/Users/Owner/Documents/robot-prog/limo_ros2/install', 'WSLENV': 'WT_SESSION:WT_PROFILE_ID:'}, 'shell': False}
+[20.651338] (-) TimerEvent: {}
+[20.751903] (-) TimerEvent: {}
+[20.785371] (robot_controller_1) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/robot_controller_1', 'build', '--build-base', '/home/kanixre/ros_ws1_wsl/ros2_ws1/build/robot_controller_1/build', 'install', '--record', '/home/kanixre/ros_ws1_wsl/ros2_ws1/build/robot_controller_1/install.log', '--single-version-externally-managed'], 'cwd': '/home/kanixre/ros_ws1_wsl/ros2_ws1/src/robot_controller_1', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'kanixre', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/mnt/c/Users/Owner/Documents/robot-prog/limo_ros2/install/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'WT_PROFILE_ID': '{61c54bbd-c2c6-5271-96e7-009a87ff44bf}', 'HOME': '/home/kanixre', 'OLDPWD': '/home/kanixre/ros_ws1_wsl', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/mnt/c/Users/Owner/Documents/robot-prog/ros_ws1/ros2_ws1/install:/mnt/c/Users/Owner/Documents/robot-prog/limo_ros2/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'kanixre', 'NAME': 'MSI', 'WSL_INTEROP': '/run/WSL/62514_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '1', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Player/bin/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/Owner/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Owner/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin', 'WT_SESSION': '771b02e3-16fb-4b9b-b63f-c265f4aa1bab', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/mnt/c/Users/Owner/Documents/robot-prog/ros_ws1/ros2_ws1/install/robot_controller_1:/mnt/c/Users/Owner/Documents/robot-prog/ros_ws1/ros2_ws1/install/opencv_test:/mnt/c/Users/Owner/Documents/robot-prog/limo_ros2/install:/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/kanixre/ros_ws1_wsl/ros2_ws1/build/robot_controller_1', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/kanixre/ros_ws1_wsl/ros2_ws1/build/robot_controller_1/prefix_override:/home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/lib/python3.10/site-packages:/mnt/c/Users/Owner/Documents/robot-prog/ros_ws1/ros2_ws1/install/robot_controller_1/lib/python3.10/site-packages:/mnt/c/Users/Owner/Documents/robot-prog/ros_ws1/ros2_ws1/install/opencv_test/lib/python3.10/site-packages:/mnt/c/Users/Owner/Documents/robot-prog/limo_ros2/build/voice_control:/mnt/c/Users/Owner/Documents/robot-prog/limo_ros2/install/local/lib/python3.10/dist-packages:/mnt/c/Users/Owner/Documents/robot-prog/limo_ros2/install/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/mnt/c/Users/Owner/Documents/robot-prog/limo_ros2/install', 'WSLENV': 'WT_SESSION:WT_PROFILE_ID:'}, 'shell': False}
+[20.852100] (-) TimerEvent: {}
+[20.952771] (-) TimerEvent: {}
+[21.053497] (-) TimerEvent: {}
+[21.154039] (-) TimerEvent: {}
+[21.254696] (-) TimerEvent: {}
+[21.355441] (-) TimerEvent: {}
+[21.456375] (-) TimerEvent: {}
+[21.557463] (-) TimerEvent: {}
+[21.658053] (-) TimerEvent: {}
+[21.758922] (-) TimerEvent: {}
+[21.859657] (-) TimerEvent: {}
+[21.960224] (-) TimerEvent: {}
+[22.061072] (-) TimerEvent: {}
+[22.161973] (-) TimerEvent: {}
+[22.262926] (-) TimerEvent: {}
+[22.363662] (-) TimerEvent: {}
+[22.464738] (-) TimerEvent: {}
+[22.565362] (-) TimerEvent: {}
+[22.665789] (-) TimerEvent: {}
+[22.766376] (-) TimerEvent: {}
+[22.866855] (-) TimerEvent: {}
+[22.967359] (-) TimerEvent: {}
+[23.067898] (-) TimerEvent: {}
+[23.168460] (-) TimerEvent: {}
+[23.269121] (-) TimerEvent: {}
+[23.369635] (-) TimerEvent: {}
+[23.470138] (-) TimerEvent: {}
+[23.570676] (-) TimerEvent: {}
+[23.671207] (-) TimerEvent: {}
+[23.771799] (-) TimerEvent: {}
+[23.872449] (-) TimerEvent: {}
+[23.973032] (-) TimerEvent: {}
+[24.074472] (-) TimerEvent: {}
+[24.175647] (-) TimerEvent: {}
+[24.276622] (-) TimerEvent: {}
+[24.303898] (opencv_test) StdoutLine: {'line': b'running egg_info\n'}
+[24.305569] (opencv_test) StdoutLine: {'line': b'writing ../../build/opencv_test/opencv_test.egg-info/PKG-INFO\n'}
+[24.306237] (opencv_test) StdoutLine: {'line': b'writing dependency_links to ../../build/opencv_test/opencv_test.egg-info/dependency_links.txt\n'}
+[24.306926] (opencv_test) StdoutLine: {'line': b'writing entry points to ../../build/opencv_test/opencv_test.egg-info/entry_points.txt\n'}
+[24.307649] (robot_controller_1) StdoutLine: {'line': b'running egg_info\n'}
+[24.308281] (opencv_test) StdoutLine: {'line': b'writing requirements to ../../build/opencv_test/opencv_test.egg-info/requires.txt\n'}
+[24.308541] (opencv_test) StdoutLine: {'line': b'writing top-level names to ../../build/opencv_test/opencv_test.egg-info/top_level.txt\n'}
+[24.309510] (robot_controller_1) StdoutLine: {'line': b'writing ../../build/robot_controller_1/robot_controller_1.egg-info/PKG-INFO\n'}
+[24.310122] (robot_controller_1) StdoutLine: {'line': b'writing dependency_links to ../../build/robot_controller_1/robot_controller_1.egg-info/dependency_links.txt\n'}
+[24.310370] (robot_controller_1) StdoutLine: {'line': b'writing entry points to ../../build/robot_controller_1/robot_controller_1.egg-info/entry_points.txt\n'}
+[24.310756] (robot_controller_1) StdoutLine: {'line': b'writing requirements to ../../build/robot_controller_1/robot_controller_1.egg-info/requires.txt\n'}
+[24.312015] (robot_controller_1) StdoutLine: {'line': b'writing top-level names to ../../build/robot_controller_1/robot_controller_1.egg-info/top_level.txt\n'}
+[24.312264] (opencv_test) StdoutLine: {'line': b"reading manifest file '../../build/opencv_test/opencv_test.egg-info/SOURCES.txt'\n"}
+[24.313261] (opencv_test) StdoutLine: {'line': b"writing manifest file '../../build/opencv_test/opencv_test.egg-info/SOURCES.txt'\n"}
+[24.313614] (opencv_test) StdoutLine: {'line': b'running build\n'}
+[24.313736] (opencv_test) StdoutLine: {'line': b'running build_py\n'}
+[24.314165] (opencv_test) StdoutLine: {'line': b'running install\n'}
+[24.315223] (robot_controller_1) StdoutLine: {'line': b"reading manifest file '../../build/robot_controller_1/robot_controller_1.egg-info/SOURCES.txt'\n"}
+[24.316477] (robot_controller_1) StdoutLine: {'line': b"writing manifest file '../../build/robot_controller_1/robot_controller_1.egg-info/SOURCES.txt'\n"}
+[24.330600] (opencv_test) StdoutLine: {'line': b'running install_lib\n'}
+[24.341645] (robot_controller_1) StdoutLine: {'line': b'running build\n'}
+[24.342382] (robot_controller_1) StdoutLine: {'line': b'running build_py\n'}
+[24.342958] (robot_controller_1) StdoutLine: {'line': b'copying robot_controller_1/object_detector1.py -> /home/kanixre/ros_ws1_wsl/ros2_ws1/build/robot_controller_1/build/lib/robot_controller_1\n'}
+[24.344408] (robot_controller_1) StdoutLine: {'line': b'copying robot_controller_1/object_counter1.py -> /home/kanixre/ros_ws1_wsl/ros2_ws1/build/robot_controller_1/build/lib/robot_controller_1\n'}
+[24.345378] (robot_controller_1) StdoutLine: {'line': b'copying robot_controller_1/robot_nav1.py -> /home/kanixre/ros_ws1_wsl/ros2_ws1/build/robot_controller_1/build/lib/robot_controller_1\n'}
+[24.347040] (robot_controller_1) StdoutLine: {'line': b'running install\n'}
+[24.347907] (robot_controller_1) StdoutLine: {'line': b'running install_lib\n'}
+[24.350221] (robot_controller_1) StdoutLine: {'line': b'copying /home/kanixre/ros_ws1_wsl/ros2_ws1/build/robot_controller_1/build/lib/robot_controller_1/object_detector1.py -> /home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/lib/python3.10/site-packages/robot_controller_1\n'}
+[24.350768] (robot_controller_1) StdoutLine: {'line': b'copying /home/kanixre/ros_ws1_wsl/ros2_ws1/build/robot_controller_1/build/lib/robot_controller_1/object_counter1.py -> /home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/lib/python3.10/site-packages/robot_controller_1\n'}
+[24.351153] (robot_controller_1) StdoutLine: {'line': b'copying /home/kanixre/ros_ws1_wsl/ros2_ws1/build/robot_controller_1/build/lib/robot_controller_1/robot_nav1.py -> /home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/lib/python3.10/site-packages/robot_controller_1\n'}
+[24.377111] (-) TimerEvent: {}
+[24.387040] (opencv_test) StdoutLine: {'line': b'running install_data\n'}
+[24.387909] (opencv_test) StdoutLine: {'line': b'running install_egg_info\n'}
+[24.420229] (robot_controller_1) StdoutLine: {'line': b'byte-compiling /home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/lib/python3.10/site-packages/robot_controller_1/object_detector1.py to object_detector1.cpython-310.pyc\n'}
+[24.423619] (robot_controller_1) StdoutLine: {'line': b'byte-compiling /home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/lib/python3.10/site-packages/robot_controller_1/object_counter1.py to object_counter1.cpython-310.pyc\n'}
+[24.426269] (robot_controller_1) StdoutLine: {'line': b'byte-compiling /home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/lib/python3.10/site-packages/robot_controller_1/robot_nav1.py to robot_nav1.cpython-310.pyc\n'}
+[24.428149] (robot_controller_1) StdoutLine: {'line': b'running install_data\n'}
+[24.429992] (robot_controller_1) StdoutLine: {'line': b'running install_egg_info\n'}
+[24.453139] (opencv_test) StdoutLine: {'line': b"removing '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test/lib/python3.10/site-packages/opencv_test-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[24.454372] (opencv_test) StdoutLine: {'line': b'Copying ../../build/opencv_test/opencv_test.egg-info to /home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test/lib/python3.10/site-packages/opencv_test-0.0.0-py3.10.egg-info\n'}
+[24.457304] (opencv_test) StdoutLine: {'line': b'running install_scripts\n'}
+[24.477250] (-) TimerEvent: {}
+[24.510671] (robot_controller_1) StdoutLine: {'line': b"removing '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/lib/python3.10/site-packages/robot_controller_1-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[24.512439] (robot_controller_1) StdoutLine: {'line': b'Copying ../../build/robot_controller_1/robot_controller_1.egg-info to /home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/lib/python3.10/site-packages/robot_controller_1-0.0.0-py3.10.egg-info\n'}
+[24.516208] (robot_controller_1) StdoutLine: {'line': b'running install_scripts\n'}
+[24.577465] (-) TimerEvent: {}
+[24.678213] (-) TimerEvent: {}
+[24.778959] (-) TimerEvent: {}
+[24.796212] (opencv_test) StdoutLine: {'line': b'Installing opencv_test script to /home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test/lib/opencv_test\n'}
+[24.797094] (opencv_test) StdoutLine: {'line': b"writing list of installed files to '/home/kanixre/ros_ws1_wsl/ros2_ws1/build/opencv_test/install.log'\n"}
+[24.834775] (robot_controller_1) StdoutLine: {'line': b'Installing object_counter script to /home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/lib/robot_controller_1\n'}
+[24.835584] (robot_controller_1) StdoutLine: {'line': b'Installing object_detector script to /home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/lib/robot_controller_1\n'}
+[24.835929] (robot_controller_1) StdoutLine: {'line': b'Installing robot_nav script to /home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/lib/robot_controller_1\n'}
+[24.836821] (robot_controller_1) StdoutLine: {'line': b"writing list of installed files to '/home/kanixre/ros_ws1_wsl/ros2_ws1/build/robot_controller_1/install.log'\n"}
+[24.877551] (opencv_test) CommandEnded: {'returncode': 0}
+[24.879116] (-) TimerEvent: {}
+[24.979724] (-) TimerEvent: {}
+[25.080291] (-) TimerEvent: {}
+[25.181000] (-) TimerEvent: {}
+[25.282669] (-) TimerEvent: {}
+[25.310696] (opencv_test) JobEnded: {'identifier': 'opencv_test', 'rc': 0}
+[25.312934] (robot_controller_1) CommandEnded: {'returncode': 0}
+[25.383042] (-) TimerEvent: {}
+[25.484630] (-) TimerEvent: {}
+[25.585309] (-) TimerEvent: {}
+[25.669404] (robot_controller_1) JobEnded: {'identifier': 'robot_controller_1', 'rc': 0}
+[25.670700] (-) EventReactorShutdown: {}

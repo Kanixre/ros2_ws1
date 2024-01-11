@@ -14,6 +14,7 @@ from tf2_ros import Buffer, TransformListener # unsure if its needed
 # ROS Messages
 from sensor_msgs.msg import Image, CameraInfo
 from geometry_msgs.msg import PoseStamped
+from visualization_msgs.msg import Marker
 from cv_bridge import CvBridge, CvBridgeError
 from tf2_geometry_msgs import do_transform_pose
 
@@ -30,14 +31,13 @@ class ObjectDetector(Node):
         super().__init__('object_detector')
         self.bridge = CvBridge()
 
-        # pothole counter -Counter variable for object detection
-        self.object_count = 0  
-
         self.camera_info_sub = self.create_subscription(CameraInfo, '/limo/depth_camera_link/camera_info',
                                                 self.camera_info_callback, 
                                                 qos_profile=qos.qos_profile_sensor_data)
         
         self.object_location_pub = self.create_publisher(PoseStamped, '/limo/object_location', 10)
+
+        self.marker_pub = self.create_publisher(Marker, '/marker', 1)
 
         self.image_sub = self.create_subscription(Image, '/limo/depth_camera_link/image_raw', 
                                                   self.image_color_callback, qos_profile=qos.qos_profile_sensor_data)
@@ -45,18 +45,20 @@ class ObjectDetector(Node):
         self.image_sub = self.create_subscription(Image, '/limo/depth_camera_link/depth/image_raw', 
                                                   self.image_depth_callback, qos_profile=qos.qos_profile_sensor_data)
         
-        # Exists in object_counter code. can only be done in oe place.
-        # self.tf_buffer = Buffer()
-        # self.tf_listener = TransformListener(self.tf_buffer, self)
+        self.tf_buffer = Buffer()
+        self.tf_listener = TransformListener(self.tf_buffer, self)
+        self.point_id = 0
 
-    # Exists in object_counter code
-    # def get_tf_transform(self, target_frame, source_frame):
-    #     try:
-    #         transform = self.tf_buffer.lookup_transform(target_frame, source_frame, rclpy.time.Time())
-    #         return transform
-    #     except Exception as e:
-    #         self.get_logger().warning(f"Failed to lookup transform: {str(e)}")
-    #         return None
+        # Message to the logger to show the node is active
+        self.get_logger().info (f"Detector is on")
+
+    def get_tf_transform(self, target_frame, source_frame):
+        try:
+            transform = self.tf_buffer.lookup_transform(target_frame, source_frame, rclpy.time.Time())
+            return transform
+        except Exception as e:
+            self.get_logger().warning(f"Failed to lookup transform: {str(e)}")
+            return None
 
     def camera_info_callback(self, data):
         if not self.camera_model:
@@ -81,18 +83,13 @@ class ObjectDetector(Node):
         except CvBridgeError as e:
             print(e)
 
-
-        # detect a color blob in the color image
-        # provide the right values, or even better do it in HSV
-        image_mask = cv2.inRange(image_color, (0, 0, 0), (255, 255, 255))
-
-        # Testing - modify this with omar help and code
-
-        # detect a color blob in the color image
+        # convert bgr to hsv
         hsv = cv2.cvtColor(image_color, cv2.COLOR_BGR2HSV)
+
         lower_pink = np.array([140, 50, 150])
         upper_pink = np.array([180, 255, 255])
         image_mask = cv2.inRange(hsv, lower_pink, upper_pink)
+
         contours, _, = cv2.findContours(image_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
         for contour in contours:
             contour_area = cv2.contourArea(contour)
@@ -100,70 +97,83 @@ class ObjectDetector(Node):
             if M["m00"] == 0:
                 print('No object detected.')
                 return    
+
             # calculate the y,x centroid
             image_coords = (M["m01"] / M["m00"], M["m10"] / M["m00"])
+            cx = int(M["m10"] / M["m00"])
+            cy = int(M["m01"] / M["m00"])  
             
+            # Draw a line around the detected pothole for better visibility 
+            cv2.drawContours(image_color, contour,-1,(255,0,0),2)           
 
-        # put everything in a for loop temporarily fixes the issue
             # "map" from color to depth image
             depth_coords = (image_depth.shape[0]/2 + (image_coords[0] - image_color.shape[0]/2)*self.color2depth_aspect, 
                 image_depth.shape[1]/2 + (image_coords[1] - image_color.shape[1]/2)*self.color2depth_aspect)
             # get the depth reading at the centroid location
             depth_value = image_depth[int(depth_coords[0]), int(depth_coords[1])] # you might need to do some boundary checking first!
 
-            print('image coords: ', image_coords)
-            print('depth coords: ', depth_coords)
-            print('depth value: ', depth_value)
-            print('contour area value', contour_area)
-
+            # Estimates the pothole area
+            if 0.35 <= depth_value <= 0.5:
+                pothole_area = contour_area / 137.838 # scaling factor - changes contour area from pixels to cm^2
+                cv2.putText(image_color, f"{round(pothole_area, 2)}cm^2",(cx, cy), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+            else: 
+                return
+            
             # calculate object's 3d location in camera coords
             camera_coords = self.camera_model.projectPixelTo3dRay((image_coords[1], image_coords[0])) #project the image coords (x,y) into 3D ray in camera coords 
             camera_coords = [x/camera_coords[2] for x in camera_coords] # adjust the resulting vector so that z = 1
             camera_coords = [x*depth_value for x in camera_coords] # multiply the vector by depth
 
-            print('camera coords: ', camera_coords)
-
             #define a point in camera coordinates
             object_location = PoseStamped()
-            object_location.header.frame_id = "depth_link"
+            object_location.header.frame_id = "depth_link" 
             object_location.pose.orientation.w = 1.0
             object_location.pose.position.x = camera_coords[0]
             object_location.pose.position.y = camera_coords[1]
             object_location.pose.position.z = camera_coords[2]
 
             # publish so we can see that in rviz
-            self.object_location_pub.publish(object_location)        
+            self.object_location_pub.publish(object_location)  
 
-            # Exists in object_counter
-            # print out the coordinates in the odom frame
-            # transform = self.get_tf_transform('depth_link', 'odom') 
-            # transform = self.get_tf_transform('odom', 'depth_link') 
-            # p_camera = do_transform_pose(object_location.pose, transform)
-            
-            # print('odom coords: ', p_camera.position) # May still be useful for report section
+            # gets out the depth_link coordinates relative to the odom
+            transform = self.get_tf_transform('odom', 'depth_link') 
+            pothole_relative_to_odom = do_transform_pose(object_location.pose, transform)          
 
-        cv2.drawContours(image_color, contours,-1,(0,255,0),2)
+            # Shows the position of the potholes in RViz
+            marker = Marker()
+            marker.header.frame_id = 'odom'
+            marker.id = self.point_id
+            marker.type = 2
+            marker.action = Marker.ADD
+            marker.lifetime.sec = 0 # Determines how long the marker stays - 0 means forever
+            marker.pose.position.x = pothole_relative_to_odom.position.x
+            marker.pose.position.y = pothole_relative_to_odom.position.y
+            marker.pose.position.z = 0.0
+            marker.pose.orientation.w = 0.0
+            marker.scale.x = 0.03
+            marker.scale.y = 0.03
+            marker.scale.z = 0.03
+            marker.color.a = 1.0
+            marker.color.r = 0.0
+            marker.color.g = 0.0
+            marker.color.b = 1.0
 
-        # draws blue dot - unneeded
-        if self.visualisation:
-            # draw circles
-            # cv2.circle(image_color, (int(image_coords[1]), int(image_coords[0])), 10, 255, -1)
-            # cv2.circle(image_depth, (int(depth_coords[1]), int(depth_coords[0])), 5, 255, -1)
+            self.marker_pub.publish(marker)
+            self.point_id += 1
 
-            #resize and adjust for visualisation
-            image_color = cv2.resize(image_color, (0,0), fx=0.5, fy=0.5)
-            image_depth *= 1.0/10.0 # scale for visualisation (max range 10.0 m)
+        # image_pothole = self.bridge.cv2_to_imgmsg(image_color, "bgr8")
+        # self.image_pub.publish(image_pothole)
+        # cv2.waitKey(1)
 
-            cv2.imshow("image depth", image_depth)
-            cv2.imshow("image color", image_color)
-            cv2.waitKey(1)
+        cv2.imshow("image color", image_color) 
+        cv2.waitKey(1)
 
 def main(args=None):
     rclpy.init(args=args)
-    image_projection = ObjectDetector()
-    rclpy.spin(image_projection)
-    image_projection.destroy_node()
-    rclpy.shutdown()
+    pothole_detector = ObjectDetector()
+    rclpy.spin(pothole_detector)
+    pothole_detector.destroy_node()
+    rclpy.shutdown()    
 
 if __name__ == '__main__':
     main()

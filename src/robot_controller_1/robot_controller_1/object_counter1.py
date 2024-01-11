@@ -1,49 +1,38 @@
 import rclpy
 from rclpy.node import Node
-from geometry_msgs.msg import PoseStamped
-from tf2_ros import Buffer, TransformListener
-from tf2_geometry_msgs import do_transform_pose
+from visualization_msgs.msg import Marker
 import numpy as np
 
-class PoseSubscriber(Node):
+class PotholeCounter(Node):
     def __init__(self):
         super().__init__('object_counter')
-        self.subscription = self.create_subscription(
-            PoseStamped, '/limo/object_location',
-            self.posestamped_callback, 10
-        )
-        
-        self.tf_buffer = Buffer()
-        self.tf_listener = TransformListener(self.tf_buffer, self)
 
+        # Subscribe to the marker value called in the detector node
+        self.marker_pub = self.create_subscription(Marker, '/marker', self.marker_callback,  1)
+
+        # Message to the logger to show the node is active
+        self.get_logger().info (f"Reporter is on")
+
+        # intialize the array to hold the pothole coordinates.
         self.coordinates = []
 
-    # convert to tf
-    def get_tf_transform(self, target_frame, source_frame):
+    def marker_callback(self, msg):
         try:
-            transform = self.tf_buffer.lookup_transform(target_frame, source_frame, rclpy.time.Time())
-            return transform
-        except Exception as e:
-            self.get_logger().warning(f"Failed to lookup transform: {str(e)}")
-            return None
-
-    def posestamped_callback(self, object_location):
-        try:
-            transform = self.get_tf_transform('odom', 'depth_link') 
-            pothole_relative_to_odom = do_transform_pose(object_location.pose, transform)
+            new_x = msg.pose.position.x
+            new_y = msg.pose.position.y
         except Exception as e:
             raise ValueError(e)
-        new_x = pothole_relative_to_odom.position.x
-        new_y = pothole_relative_to_odom.position.y
+        
         if self.threshold_check(new_x, new_y):
-            return
-        self.coordinates.append((new_x, new_y))
-        # print("Count : ", len(self.coordinates)) # prints number of potholes as length of the array For testing
-        self.get_logger().info (f"Pothole Count : , {len(self.coordinates)}") # Prints the Pothole count value to the log screen
+                return
 
-    # change variable names and learn em
+        self.coordinates.append((new_x, new_y))
+        # Prints the Pothole count value to the log screen
+        self.get_logger().info (f"Pothole Count : {len(self.coordinates)}")
+        
+
     def threshold_check(self, new_x, new_y):
-        threshold = 0.15 # min pythagoras distance between 2 pothole coords. Still working on the appropriate value 
+        threshold = 0.095 # min distance between 2 pothole coordinates
         for coord in self.coordinates:
             if self.calculate_distance(coord[0], coord[1], new_x, new_y) < threshold:
                 return True
@@ -52,21 +41,25 @@ class PoseSubscriber(Node):
     def calculate_distance(self, x1, y1, x2, y2):
         return np.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
     
-
-    # print out the coordinates in the odom frame
-           
-        
-    # # Part of the pothole counter...
-            # pothole_relative_to_odom = PoseStamped()
-            # pothole_relative_to_odom.header.frame_id = 'odom' # frame position is odom, the world
-            # pothole_relative_to_odom.pose = p_camera
-            # self.object_location_pub.publish(pothole_relative_to_odom)
-
+    
 def main(args=None):
     rclpy.init(args=args)
-    pose_subscriber = PoseSubscriber()
-    rclpy.spin(pose_subscriber)
-    pose_subscriber.destroy_node()
+    pothole_counter = PotholeCounter()
+    try:
+        rclpy.spin(pothole_counter)
+    except KeyboardInterrupt:
+        # Prints the Pothole counts final value to the log screen
+        print("Final Pothole Count : ", len(pothole_counter.coordinates))
+
+    # Save the report to a text file
+    filename = 'report.txt'
+    with open(filename, 'w') as file:
+        file.write(f'Number of potholes found : {len(pothole_counter.coordinates)}\n\n')
+        for count, (x, y) in enumerate(pothole_counter.coordinates, start=1):
+            file.write(f'Pothole {count}. {x}, {y}\n')
+        print(f'Report save to {filename}.')
+
+    pothole_counter.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':

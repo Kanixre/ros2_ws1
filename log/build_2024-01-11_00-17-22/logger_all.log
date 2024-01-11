@@ -1,0 +1,180 @@
+[9.969s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[9.969s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f1703516080>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f170375fdf0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f170375fdf0>>)
+[10.589s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[10.590s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[10.591s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[10.591s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[10.591s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[10.591s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[10.591s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/kanixre/ros_ws1_wsl/ros2_ws1'
+[10.591s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[10.591s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[10.591s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[10.592s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[10.592s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[10.592s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[10.592s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[10.592s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[10.592s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[10.646s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[10.646s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[10.646s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[10.646s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[10.646s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[10.646s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[10.646s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[10.646s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[10.646s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[10.647s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[10.647s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[10.647s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[10.647s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[10.647s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[10.647s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[10.647s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[10.647s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[10.647s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[10.647s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[10.647s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[10.647s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[10.647s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[10.647s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[10.647s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[10.647s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[10.647s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[10.647s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[10.647s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[10.648s] Level 1:colcon.colcon_core.package_identification:_identify(src/opencv_test) by extensions ['ignore', 'ignore_ament_install']
+[10.648s] Level 1:colcon.colcon_core.package_identification:_identify(src/opencv_test) by extension 'ignore'
+[10.648s] Level 1:colcon.colcon_core.package_identification:_identify(src/opencv_test) by extension 'ignore_ament_install'
+[10.648s] Level 1:colcon.colcon_core.package_identification:_identify(src/opencv_test) by extensions ['colcon_pkg']
+[10.648s] Level 1:colcon.colcon_core.package_identification:_identify(src/opencv_test) by extension 'colcon_pkg'
+[10.648s] Level 1:colcon.colcon_core.package_identification:_identify(src/opencv_test) by extensions ['colcon_meta']
+[10.648s] Level 1:colcon.colcon_core.package_identification:_identify(src/opencv_test) by extension 'colcon_meta'
+[10.648s] Level 1:colcon.colcon_core.package_identification:_identify(src/opencv_test) by extensions ['ros']
+[10.648s] Level 1:colcon.colcon_core.package_identification:_identify(src/opencv_test) by extension 'ros'
+[10.652s] DEBUG:colcon.colcon_core.package_identification:Package 'src/opencv_test' with type 'ros.ament_python' and name 'opencv_test'
+[10.652s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_controller_1) by extensions ['ignore', 'ignore_ament_install']
+[10.652s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_controller_1) by extension 'ignore'
+[10.652s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_controller_1) by extension 'ignore_ament_install'
+[10.653s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_controller_1) by extensions ['colcon_pkg']
+[10.653s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_controller_1) by extension 'colcon_pkg'
+[10.653s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_controller_1) by extensions ['colcon_meta']
+[10.653s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_controller_1) by extension 'colcon_meta'
+[10.653s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_controller_1) by extensions ['ros']
+[10.653s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_controller_1) by extension 'ros'
+[10.654s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_controller_1' with type 'ros.ament_python' and name 'robot_controller_1'
+[10.654s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[10.654s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[10.654s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[10.654s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[10.654s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[11.708s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[11.708s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[12.174s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /mnt/c/Users/Owner/Documents/robot-prog/ros_ws1/ros2_ws1/install
+[12.482s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 10 installed packages in /mnt/c/Users/Owner/Documents/robot-prog/limo_ros2/install
+[12.594s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 347 installed packages in /opt/ros/humble
+[12.596s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[13.396s] Level 5:colcon.colcon_core.verb:set package 'opencv_test' build argument 'cmake_args' from command line to 'None'
+[13.396s] Level 5:colcon.colcon_core.verb:set package 'opencv_test' build argument 'cmake_target' from command line to 'None'
+[13.396s] Level 5:colcon.colcon_core.verb:set package 'opencv_test' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[13.396s] Level 5:colcon.colcon_core.verb:set package 'opencv_test' build argument 'cmake_clean_cache' from command line to 'False'
+[13.396s] Level 5:colcon.colcon_core.verb:set package 'opencv_test' build argument 'cmake_clean_first' from command line to 'False'
+[13.396s] Level 5:colcon.colcon_core.verb:set package 'opencv_test' build argument 'cmake_force_configure' from command line to 'False'
+[13.396s] Level 5:colcon.colcon_core.verb:set package 'opencv_test' build argument 'ament_cmake_args' from command line to 'None'
+[13.396s] Level 5:colcon.colcon_core.verb:set package 'opencv_test' build argument 'catkin_cmake_args' from command line to 'None'
+[13.396s] Level 5:colcon.colcon_core.verb:set package 'opencv_test' build argument 'catkin_skip_building_tests' from command line to 'False'
+[13.396s] DEBUG:colcon.colcon_core.verb:Building package 'opencv_test' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kanixre/ros_ws1_wsl/ros2_ws1/build/opencv_test', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test', 'merge_install': False, 'path': '/home/kanixre/ros_ws1_wsl/ros2_ws1/src/opencv_test', 'symlink_install': False, 'test_result_base': None}
+[13.512s] Level 5:colcon.colcon_core.verb:set package 'robot_controller_1' build argument 'cmake_args' from command line to 'None'
+[13.513s] Level 5:colcon.colcon_core.verb:set package 'robot_controller_1' build argument 'cmake_target' from command line to 'None'
+[13.513s] Level 5:colcon.colcon_core.verb:set package 'robot_controller_1' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[13.513s] Level 5:colcon.colcon_core.verb:set package 'robot_controller_1' build argument 'cmake_clean_cache' from command line to 'False'
+[13.513s] Level 5:colcon.colcon_core.verb:set package 'robot_controller_1' build argument 'cmake_clean_first' from command line to 'False'
+[13.513s] Level 5:colcon.colcon_core.verb:set package 'robot_controller_1' build argument 'cmake_force_configure' from command line to 'False'
+[13.513s] Level 5:colcon.colcon_core.verb:set package 'robot_controller_1' build argument 'ament_cmake_args' from command line to 'None'
+[13.513s] Level 5:colcon.colcon_core.verb:set package 'robot_controller_1' build argument 'catkin_cmake_args' from command line to 'None'
+[13.513s] Level 5:colcon.colcon_core.verb:set package 'robot_controller_1' build argument 'catkin_skip_building_tests' from command line to 'False'
+[13.513s] DEBUG:colcon.colcon_core.verb:Building package 'robot_controller_1' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kanixre/ros_ws1_wsl/ros2_ws1/build/robot_controller_1', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1', 'merge_install': False, 'path': '/home/kanixre/ros_ws1_wsl/ros2_ws1/src/robot_controller_1', 'symlink_install': False, 'test_result_base': None}
+[13.625s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[13.746s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[13.747s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/kanixre/ros_ws1_wsl/ros2_ws1/src/opencv_test' with build type 'ament_python'
+[13.747s] Level 1:colcon.colcon_core.shell:create_environment_hook('opencv_test', 'ament_prefix_path')
+[13.940s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[13.941s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test/share/opencv_test/hook/ament_prefix_path.ps1'
+[13.941s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test/share/opencv_test/hook/ament_prefix_path.dsv'
+[13.942s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test/share/opencv_test/hook/ament_prefix_path.sh'
+[14.055s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[14.056s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[14.929s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/kanixre/ros_ws1_wsl/ros2_ws1/src/robot_controller_1' with build type 'ament_python'
+[14.930s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_controller_1', 'ament_prefix_path')
+[15.048s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/share/robot_controller_1/hook/ament_prefix_path.ps1'
+[15.049s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/share/robot_controller_1/hook/ament_prefix_path.dsv'
+[15.050s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/share/robot_controller_1/hook/ament_prefix_path.sh'
+[15.178s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[15.178s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[21.387s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/kanixre/ros_ws1_wsl/ros2_ws1/src/opencv_test'
+[21.503s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[21.503s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[27.675s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/kanixre/ros_ws1_wsl/ros2_ws1/src/robot_controller_1'
+[27.788s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[27.788s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[33.830s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kanixre/ros_ws1_wsl/ros2_ws1/src/opencv_test': PYTHONPATH=/home/kanixre/ros_ws1_wsl/ros2_ws1/build/opencv_test/prefix_override:/home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/opencv_test build --build-base /home/kanixre/ros_ws1_wsl/ros2_ws1/build/opencv_test/build install --record /home/kanixre/ros_ws1_wsl/ros2_ws1/build/opencv_test/install.log --single-version-externally-managed
+[33.959s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kanixre/ros_ws1_wsl/ros2_ws1/src/robot_controller_1': PYTHONPATH=/home/kanixre/ros_ws1_wsl/ros2_ws1/build/robot_controller_1/prefix_override:/home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/robot_controller_1 build --build-base /home/kanixre/ros_ws1_wsl/ros2_ws1/build/robot_controller_1/build install --record /home/kanixre/ros_ws1_wsl/ros2_ws1/build/robot_controller_1/install.log --single-version-externally-managed
+[38.027s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kanixre/ros_ws1_wsl/ros2_ws1/src/opencv_test' returned '0': PYTHONPATH=/home/kanixre/ros_ws1_wsl/ros2_ws1/build/opencv_test/prefix_override:/home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/opencv_test build --build-base /home/kanixre/ros_ws1_wsl/ros2_ws1/build/opencv_test/build install --record /home/kanixre/ros_ws1_wsl/ros2_ws1/build/opencv_test/install.log --single-version-externally-managed
+[38.208s] Level 1:colcon.colcon_core.environment:checking '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test' for CMake module files
+[38.208s] Level 1:colcon.colcon_core.environment:checking '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test' for CMake config files
+[38.209s] Level 1:colcon.colcon_core.environment:checking '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test/lib'
+[38.209s] Level 1:colcon.colcon_core.environment:checking '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test/bin'
+[38.209s] Level 1:colcon.colcon_core.environment:checking '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test/lib/pkgconfig/opencv_test.pc'
+[38.209s] Level 1:colcon.colcon_core.environment:checking '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test/lib/python3.10/site-packages'
+[38.209s] Level 1:colcon.colcon_core.shell:create_environment_hook('opencv_test', 'pythonpath')
+[38.325s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test/share/opencv_test/hook/pythonpath.ps1'
+[38.326s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test/share/opencv_test/hook/pythonpath.dsv'
+[38.326s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test/share/opencv_test/hook/pythonpath.sh'
+[38.327s] Level 1:colcon.colcon_core.environment:checking '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test/bin'
+[38.327s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(opencv_test)
+[38.448s] INFO:colcon.colcon_core.shell:Creating package script '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test/share/opencv_test/package.ps1'
+[38.449s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test/share/opencv_test/package.dsv'
+[38.450s] INFO:colcon.colcon_core.shell:Creating package script '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test/share/opencv_test/package.sh'
+[38.450s] INFO:colcon.colcon_core.shell:Creating package script '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test/share/opencv_test/package.bash'
+[38.451s] INFO:colcon.colcon_core.shell:Creating package script '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test/share/opencv_test/package.zsh'
+[38.453s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test/share/colcon-core/packages/opencv_test)
+[38.458s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kanixre/ros_ws1_wsl/ros2_ws1/src/robot_controller_1' returned '0': PYTHONPATH=/home/kanixre/ros_ws1_wsl/ros2_ws1/build/robot_controller_1/prefix_override:/home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/robot_controller_1 build --build-base /home/kanixre/ros_ws1_wsl/ros2_ws1/build/robot_controller_1/build install --record /home/kanixre/ros_ws1_wsl/ros2_ws1/build/robot_controller_1/install.log --single-version-externally-managed
+[38.573s] Level 1:colcon.colcon_core.environment:checking '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1' for CMake module files
+[38.573s] Level 1:colcon.colcon_core.environment:checking '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1' for CMake config files
+[38.574s] Level 1:colcon.colcon_core.environment:checking '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/lib'
+[38.574s] Level 1:colcon.colcon_core.environment:checking '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/bin'
+[38.574s] Level 1:colcon.colcon_core.environment:checking '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/lib/pkgconfig/robot_controller_1.pc'
+[38.574s] Level 1:colcon.colcon_core.environment:checking '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/lib/python3.10/site-packages'
+[38.575s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_controller_1', 'pythonpath')
+[38.691s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/share/robot_controller_1/hook/pythonpath.ps1'
+[38.692s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/share/robot_controller_1/hook/pythonpath.dsv'
+[38.692s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/share/robot_controller_1/hook/pythonpath.sh'
+[38.693s] Level 1:colcon.colcon_core.environment:checking '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/bin'
+[38.693s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_controller_1)
+[38.815s] INFO:colcon.colcon_core.shell:Creating package script '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/share/robot_controller_1/package.ps1'
+[38.816s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/share/robot_controller_1/package.dsv'
+[38.817s] INFO:colcon.colcon_core.shell:Creating package script '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/share/robot_controller_1/package.sh'
+[38.817s] INFO:colcon.colcon_core.shell:Creating package script '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/share/robot_controller_1/package.bash'
+[38.817s] INFO:colcon.colcon_core.shell:Creating package script '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/share/robot_controller_1/package.zsh'
+[38.817s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kanixre/ros_ws1_wsl/ros2_ws1/install/robot_controller_1/share/colcon-core/packages/robot_controller_1)
+[38.818s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[38.819s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[38.819s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[38.819s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[39.147s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[39.147s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[39.148s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[39.148s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[39.148s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.FileNotFound: Failed to connect to socket /run/user/1000/bus: No such file or directory
+[39.148s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[39.262s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/local_setup.ps1'
+[39.264s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/_local_setup_util_ps1.py'
+[39.265s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/setup.ps1'
+[39.464s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/local_setup.sh'
+[39.465s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/_local_setup_util_sh.py'
+[39.466s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/setup.sh'
+[39.652s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/local_setup.bash'
+[39.652s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/setup.bash'
+[39.840s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/local_setup.zsh'
+[39.841s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/setup.zsh'

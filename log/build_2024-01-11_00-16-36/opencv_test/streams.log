@@ -1,0 +1,21 @@
+[20.650s] Invoking command in '/home/kanixre/ros_ws1_wsl/ros2_ws1/src/opencv_test': PYTHONPATH=/home/kanixre/ros_ws1_wsl/ros2_ws1/build/opencv_test/prefix_override:/home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/opencv_test build --build-base /home/kanixre/ros_ws1_wsl/ros2_ws1/build/opencv_test/build install --record /home/kanixre/ros_ws1_wsl/ros2_ws1/build/opencv_test/install.log --single-version-externally-managed
+[24.303s] running egg_info
+[24.304s] writing ../../build/opencv_test/opencv_test.egg-info/PKG-INFO
+[24.305s] writing dependency_links to ../../build/opencv_test/opencv_test.egg-info/dependency_links.txt
+[24.306s] writing entry points to ../../build/opencv_test/opencv_test.egg-info/entry_points.txt
+[24.307s] writing requirements to ../../build/opencv_test/opencv_test.egg-info/requires.txt
+[24.307s] writing top-level names to ../../build/opencv_test/opencv_test.egg-info/top_level.txt
+[24.311s] reading manifest file '../../build/opencv_test/opencv_test.egg-info/SOURCES.txt'
+[24.312s] writing manifest file '../../build/opencv_test/opencv_test.egg-info/SOURCES.txt'
+[24.312s] running build
+[24.312s] running build_py
+[24.313s] running install
+[24.329s] running install_lib
+[24.386s] running install_data
+[24.387s] running install_egg_info
+[24.452s] removing '/home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test/lib/python3.10/site-packages/opencv_test-0.0.0-py3.10.egg-info' (and everything under it)
+[24.453s] Copying ../../build/opencv_test/opencv_test.egg-info to /home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test/lib/python3.10/site-packages/opencv_test-0.0.0-py3.10.egg-info
+[24.456s] running install_scripts
+[24.795s] Installing opencv_test script to /home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test/lib/opencv_test
+[24.796s] writing list of installed files to '/home/kanixre/ros_ws1_wsl/ros2_ws1/build/opencv_test/install.log'
+[24.877s] Invoked command in '/home/kanixre/ros_ws1_wsl/ros2_ws1/src/opencv_test' returned '0': PYTHONPATH=/home/kanixre/ros_ws1_wsl/ros2_ws1/build/opencv_test/prefix_override:/home/kanixre/ros_ws1_wsl/ros2_ws1/install/opencv_test/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/opencv_test build --build-base /home/kanixre/ros_ws1_wsl/ros2_ws1/build/opencv_test/build install --record /home/kanixre/ros_ws1_wsl/ros2_ws1/build/opencv_test/install.log --single-version-externally-managed
